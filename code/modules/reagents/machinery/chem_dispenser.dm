@@ -134,9 +134,9 @@
 		dispensable_reagents -= emagged_reagents
 
 /obj/machinery/chem_dispenser/ui_interact(mob/user, datum/tgui/ui)
-	if(needs_medical_training && ishuman(usr) && user.skills.getRating(SKILL_MEDICAL) < SKILL_MEDICAL_PRACTICED)
-		balloon_alert(user, "You don't know how to use this")
-		return
+	// if(needs_medical_training && ishuman(usr) && user.skills.getRating(SKILL_MEDICAL) < SKILL_MEDICAL_PRACTICED) // RUTGMC EDIT
+	// 	balloon_alert(user, "You don't know how to use this")
+	// 	return
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)

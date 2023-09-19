@@ -342,9 +342,9 @@
 	. = ..()
 	if(.)
 		return
-	if(user.skills.getRating(SKILL_MEDICAL) < SKILL_MEDICAL_PRACTICED)
-		balloon_alert(user, "skill issue")
-		return
+	// if(user.skills.getRating(SKILL_MEDICAL) < SKILL_MEDICAL_PRACTICED) // RUTGMC EDIT
+	// 	balloon_alert(user, "skill issue")
+	// 	return
 
 	if(!(user.client in has_sprites))
 		spawn()
