@@ -54,7 +54,7 @@ GLOBAL_LIST_INIT(all_xeno_types, list(
 	/mob/living/carbon/xenomorph/spiderling,
 	))
 
-GLOBAL_LIST_INIT(xeno_types_tier_two, list(/mob/living/carbon/xenomorph/hunter, /mob/living/carbon/xenomorph/panther, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/spitter, /mob/living/carbon/xenomorph/hivelord, /mob/living/carbon/xenomorph/carrier, /mob/living/carbon/xenomorph/bull, /mob/living/carbon/xenomorph/wraith))
+GLOBAL_LIST_INIT(xeno_types_tier_two, list(/mob/living/carbon/xenomorph/hunter, /mob/living/carbon/xenomorph/panther, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/spitter, /mob/living/carbon/xenomorph/hivelord, /mob/living/carbon/xenomorph/carrier, /mob/living/carbon/xenomorph/bull, /mob/living/carbon/xenomorph/wraith, /mob/living/carbon/xenomorph/puppeteer))
 
 GLOBAL_LIST_INIT(forbid_excepts, list(
 	/mob/living/carbon/xenomorph/king,

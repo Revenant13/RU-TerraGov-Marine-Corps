@@ -663,12 +663,17 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	name = dat + " radio headset"
 	return ..()
 
+/obj/item/radio/headset/mainship/som/command
+	name = "SOM command radio headset"
+	icon_state = "com_headset_alt"
+	keyslot = /obj/item/encryptionkey/mcom/som
+	use_command = TRUE
+	command = TRUE
 
 /obj/item/radio/headset/mainship/som/zulu
 	name = "SOM zulu radio headset"
 	icon_state = "headset_marine_zulu"
 	frequency = FREQ_ZULU
-	minimap_type = /datum/action/minimap/som
 
 /obj/item/radio/headset/mainship/som/zulu/LateInitialize()
 	. = ..()
@@ -692,7 +697,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	name = "SOM yankee radio headset"
 	icon_state = "headset_marine_yankee"
 	frequency = FREQ_YANKEE
-	minimap_type = /datum/action/minimap/som
 
 /obj/item/radio/headset/mainship/som/yankee/LateInitialize()
 	. = ..()
@@ -716,7 +720,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	name = "SOM xray radio headset"
 	icon_state = "headset_marine_xray"
 	frequency = FREQ_XRAY
-	minimap_type = /datum/action/minimap/som
 
 /obj/item/radio/headset/mainship/som/xray/LateInitialize()
 	. = ..()
@@ -740,7 +743,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	name = "SOM whiskey radio headset"
 	icon_state = "headset_marine_whiskey"
 	frequency = FREQ_WHISKEY
-	minimap_type = /datum/action/minimap/som
 
 /obj/item/radio/headset/mainship/som/whiskey/LateInitialize()
 	. = ..()

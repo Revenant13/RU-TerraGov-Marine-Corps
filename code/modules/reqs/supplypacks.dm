@@ -312,6 +312,18 @@ WEAPONS
 	)
 	cost = 20
 
+
+/datum/supply_packs/weapons/heayvlaser_emplacement
+	name = "Mounted Heavy Laser"
+	contains = list(/obj/item/weapon/gun/heavy_laser/deployable)
+	cost = 800
+
+
+/datum/supply_packs/weapons/heayvlaser_ammo
+	name = "Mounted Heavy Laser Ammo (x1)"
+	contains = list(/obj/item/ammo_magazine/heavy_laser)
+	cost = 15
+
 /datum/supply_packs/weapons/tesla
 	name = "Tesla Shock Rifle"
 	contains = list(/obj/item/weapon/gun/energy/lasgun/lasrifle/tesla)
@@ -404,6 +416,11 @@ WEAPONS
 	name = "PB-12 pepperball gun"
 	contains = list(/obj/item/weapon/gun/rifle/pepperball)
 	cost = 100
+
+/datum/supply_packs/weapons/bricks
+	name = "Brick"
+	contains = list(/obj/item/weapon/brick)
+	cost = 10
 
 /datum/supply_packs/weapons/railgun
 	name = "SR-220 Railgun"
@@ -1734,6 +1751,16 @@ Imports
 /datum/supply_packs/imports/famas/ammo
 	name = "FAMAS Assault Rifle Ammo"
 	contains = list(/obj/item/ammo_magazine/rifle/famas)
+	cost = 5
+
+/datum/supply_packs/imports/aug	//Vietnam time
+	name = "L&S EM-88 Assault Carbine"
+	contains = list(/obj/item/weapon/gun/rifle/icc_assaultcarbine/export)
+	cost = 120
+
+/datum/supply_packs/imports/aug/ammo
+	name = "EM-88 Assault Carbine Ammo"
+	contains = list(/obj/item/ammo_magazine/rifle/icc_assaultcarbine/export)
 	cost = 5
 
 /datum/supply_packs/imports/rev357

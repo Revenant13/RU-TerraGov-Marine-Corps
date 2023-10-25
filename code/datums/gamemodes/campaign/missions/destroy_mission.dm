@@ -3,7 +3,7 @@
 	name = "Target Destruction" //(tm)
 	map_name = "Ice Caves"
 	map_file = '_maps/map_files/icy_caves/icy_caves.dmm'
-	max_game_time = 20 MINUTES
+	max_game_time = 12 MINUTES
 	victory_point_rewards = list(
 		MISSION_OUTCOME_MAJOR_VICTORY = list(3, 0),
 		MISSION_OUTCOME_MINOR_VICTORY = list(1, 0),
@@ -12,11 +12,11 @@
 		MISSION_OUTCOME_MAJOR_LOSS = list(0, 3),
 	)
 	attrition_point_rewards = list(
-		MISSION_OUTCOME_MAJOR_VICTORY = list(20, 5),
-		MISSION_OUTCOME_MINOR_VICTORY = list(15, 10),
-		MISSION_OUTCOME_DRAW = list(10, 10),
-		MISSION_OUTCOME_MINOR_LOSS = list(10, 15),
-		MISSION_OUTCOME_MAJOR_LOSS = list(5, 20),
+		MISSION_OUTCOME_MAJOR_VICTORY = list(10, 0),
+		MISSION_OUTCOME_MINOR_VICTORY = list(5, 0),
+		MISSION_OUTCOME_DRAW = list(0, 0),
+		MISSION_OUTCOME_MINOR_LOSS = list(0, 10),
+		MISSION_OUTCOME_MAJOR_LOSS = list(0, 15),
 	)
 	///Total number of objectives at round start
 	var/objectives_total = 3
@@ -54,6 +54,12 @@
 	objectives_total = length(GLOB.campaign_objectives)
 	if(!objectives_total)
 		CRASH("Destroy mission loaded with no objectives to destroy!")
+
+/datum/campaign_mission/destroy_mission/load_pre_mission_bonuses()
+	new /obj/item/storage/box/crate/loot/materials_pack(get_turf(pick(GLOB.campaign_reward_spawners[hostile_faction])))
+
+	for(var/i = 1 to objectives_total)
+		new /obj/item/explosive/plastique(get_turf(pick(GLOB.campaign_reward_spawners[starting_faction])))
 
 /datum/campaign_mission/destroy_mission/load_objective_description()
 	starting_faction_objective_description = "Major Victory:Destroy all [objectives_total] targets.[min_destruction_amount ? " Minor Victory: Destroy at least [min_destruction_amount] targets." : ""]"
