@@ -2,6 +2,10 @@
 	name = "Shipside 'Normandy' Hangar Pad"
 	id = SHUTTLE_NORMANDY
 	roundstart_template = /datum/map_template/shuttle/dropship_one
+	dwidth = 5
+	dheight = 10
+	width = 11
+	height = 21
 
 /obj/docking_port/stationary/marine_dropship/hangar/two
 	name = "Shipside 'Alamo' Hangar Pad"
@@ -11,11 +15,14 @@
 	dwidth = 4
 	height = 13
 	width = 9
-
 /obj/docking_port/mobile/marine_dropship/one
 	name = "Normandy"
 	id = SHUTTLE_NORMANDY
 	control_flags = SHUTTLE_MARINE_PRIMARY_DROPSHIP
+	dwidth = 5
+	dheight = 10
+	width = 11
+	height = 21
 
 /obj/docking_port/mobile/marine_dropship/two
 	name = "Alamo"
