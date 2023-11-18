@@ -57,15 +57,3 @@
 	var/grab_distance = (isitem(victim)) ? 5 : 4 //Objects get flung further away.
 
 	victim.throw_at(owner, grab_distance, 1, owner, TRUE)
-
-	var/mob/living/carbon/xenomorph/X = owner
-	var/datum/action/xeno_action/fling = X.actions_by_path[/datum/action/xeno_action/activable/psychic_fling]
-	if(fling)
-		fling.add_cooldown()
-
-/datum/action/xeno_action/activable/psychic_fling/use_ability(atom/target)
-	. = ..()
-	var/mob/living/carbon/xenomorph/X = owner
-	var/datum/action/xeno_action/grab = X.actions_by_path[/datum/action/xeno_action/activable/psychic_grab]
-	if(grab)
-		grab.add_cooldown()
