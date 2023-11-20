@@ -166,6 +166,9 @@ GLOBAL_LIST_INIT(leader_gear_listed_products, list(
 		/obj/item/ammo_magazine/rocket/recoilless/smoke = list(CAT_LEDSUP, "RL-160 RR Smoke shell", 1, "black"),
 		/obj/item/ammo_magazine/rocket/recoilless/cloak = list(CAT_LEDSUP, "RL-160 RR Cloak shell", 2, "black"),
 		/obj/item/ammo_magazine/rocket/recoilless/plasmaloss = list(CAT_LEDSUP, "RL-160 RR Tanglefoot shell", 5, "black"),
+		/obj/item/weapon/gun/shotgun/pump/lever/mbx900 = list(CAT_LEDSUP, "MBX 900", 10, "black"),
+		/obj/item/ammo_magazine/shotgun/mbx900 = list(CAT_LEDSUP, "A box of .410 sabot rounds.", 2, "black"),
+		/obj/item/ammo_magazine/shotgun/mbx900/buckshot = list(CAT_LEDSUP, "A box of .410 buckshot rounds", 2, "black"),
 		//RUTGMC EDIT ADDITION END
 		/obj/item/weapon/gun/rifle/tx55 = list(CAT_LEDSUP, "AR-55 OICW Rifle", 15, "black"),
 		/obj/item/ammo_magazine/rifle/tx54 = list(CAT_LEDSUP, "GL-54 Flak Magazine for AR-55/GL-54", 3, "black"),
