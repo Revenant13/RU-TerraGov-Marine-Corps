@@ -170,7 +170,7 @@ GLOBAL_LIST_INIT(leader_gear_listed_products, list(
 		/obj/item/ammo_magazine/shotgun/mbx900 = list(CAT_LEDSUP, "A box of .410 sabot rounds.", 2, "black"),
 		/obj/item/ammo_magazine/shotgun/mbx900/buckshot = list(CAT_LEDSUP, "A box of .410 buckshot rounds", 2, "black"),
 		//RUTGMC EDIT ADDITION END
-		/obj/item/weapon/gun/rifle/tx55 = list(CAT_LEDSUP, "AR-55 OICW Rifle", 20, "black"),
+		/obj/item/weapon/gun/rifle/tx55 = list(CAT_LEDSUP, "AR-55 OICW Rifle", 25, "black"),
 		/obj/item/ammo_magazine/rifle/tx54 = list(CAT_LEDSUP, "GL-54 Flak Magazine for AR-55/GL-54", 3, "black"),
 		/obj/item/ammo_magazine/rifle/tx54/he = list(CAT_LEDSUP, "GL-54 HE Magazine for AR-55/GL-54", 5, "black"),
 		/obj/item/ammo_magazine/rifle/tx54/smoke = list(CAT_LEDSUP, "GL-54 tactical smoke Magazine for AR-55/GL-54", 1, "black"),
