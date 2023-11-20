@@ -21,7 +21,7 @@
 /datum/action/xeno_action/activable/heal_screech
 	name = "Heal Screech"
 	action_icon_state = "heal_screech"
-	desc = "placeholder"
+	desc = "Screech that heals nearby xenos."
 	ability_name = "heal_screech"
 	plasma_cost = 250
 	cooldown_timer = 30 SECONDS
@@ -56,7 +56,7 @@
 /datum/action/xeno_action/activable/plasma_screech
 	name = "Plasma Screech"
 	action_icon_state = "plasma_screech"
-	desc = "placeholder"
+	desc = "Screech that increases plasma regeneration for nearby xenos."
 	ability_name = "plasma_screech"
 	plasma_cost = 250
 	cooldown_timer = 30 SECONDS
@@ -93,7 +93,7 @@
 /datum/action/xeno_action/activable/frenzy_screech
 	name = "Frenzy Screech"
 	action_icon_state = "frenzy_screech"
-	desc = "placeholder"
+	desc = "Screech that increases damage for nearby xenos."
 	ability_name = "frenzy_screech"
 	plasma_cost = 250
 	cooldown_timer = 30 SECONDS
