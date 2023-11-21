@@ -148,7 +148,7 @@ GLOBAL_LIST_INIT(leader_gear_listed_products, list(
 		/obj/structure/closet/bodybag/tarp = list(CAT_LEDSUP, "V1 thermal-dampening tarp", 2, "black"),
 		/obj/item/explosive/grenade/smokebomb/cloak = list(CAT_LEDSUP, "Cloak grenade", 1, "black"),
 		/obj/item/explosive/grenade/incendiary = list(CAT_LEDSUP, "M40 HIDP incendiary grenade", 1, "black"),
-		//RUTGMC EDIT ADDITION BEGIN - SWORDS
+		//RUTGMC EDIT ADDITION BEGIN - GRENADES
 		/obj/item/explosive/grenade/phosphorus = list(CAT_LEDSUP, "M40 HPDP grenade", 5, "black"),
 		//RUTGMC EDIT ADDITION END
 		/obj/item/storage/pouch/explosive/razorburn = list(CAT_LEDSUP, "Pack of Razorburn grenades", 15, "orange"),
