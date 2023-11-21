@@ -35,7 +35,7 @@
 	var/mob/living/carbon/xenomorph/queen/X = owner
 
 	for(var/mob/living/carbon/xenomorph/affected_xeno in cheap_get_xenos_near(X, screech_range))
-		affected_xeno.apply_status_effect(/datum/status_effect/healing_infusion, HIVELORD_HEALING_INFUSION_DURATION / 3, HIVELORD_HEALING_INFUSION_TICKS)
+		affected_xeno.apply_status_effect(/datum/status_effect/healing_infusion, HIVELORD_HEALING_INFUSION_DURATION / 3, HIVELORD_HEALING_INFUSION_TICKS / 2)
 
 	playsound(X.loc, 'modular_RUtgmc/sound/voice/alien_heal_screech.ogg', 75, 0)
 	X.visible_message(span_xenohighdanger("\The [X] emits an ear-splitting guttural roar!"))
@@ -72,6 +72,8 @@
 	var/mob/living/carbon/xenomorph/queen/X = owner
 
 	for(var/mob/living/carbon/xenomorph/affected_xeno in cheap_get_xenos_near(X, screech_range))
+		if(!(affected_xeno.xeno_caste.can_flags & CASTE_CAN_BE_GIVEN_PLASMA))
+			continue
 		affected_xeno.apply_status_effect(/datum/status_effect/plasma_surge, affected_xeno.xeno_caste.plasma_max / 2, bonus_regen, duration)
 
 	playsound(X.loc, 'modular_RUtgmc/sound/voice/alien_plasma_screech.ogg', 75, 0)
@@ -98,8 +100,8 @@
 	plasma_cost = 250
 	cooldown_timer = 30 SECONDS
 	var/screech_range = 5
-	var/buff_duration = 5 SECONDS
-	var/buff_damage_modifier = 0.15
+	var/buff_duration = 10 SECONDS
+	var/buff_damage_modifier = 0.1
 	keybind_flags = XACT_KEYBIND_USE_ABILITY
 	keybinding_signals = list(
 		KEYBINDING_NORMAL = COMSIG_XENOABILITY_FRENZY_SCREECH,
