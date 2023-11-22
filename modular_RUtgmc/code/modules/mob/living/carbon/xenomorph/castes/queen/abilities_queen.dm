@@ -2,7 +2,7 @@
 	use_state_flags = XACT_USE_LYING|XACT_USE_AGILITY
 
 /datum/action/xeno_action/activable/screech
-	cooldown_timer = 30 SECONDS
+	cooldown_timer = 60 SECONDS
 
 /datum/action/xeno_action/activable/screech/use_ability(atom/A)
 	. = ..()
