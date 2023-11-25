@@ -53,7 +53,7 @@ GLOBAL_LIST_INIT(commander_gear_listed_products, list(
 		/obj/item/megaphone = list(CAT_FCSUP, "Megaphone", 5, "orange"),
 		/obj/item/whistle = list(CAT_FCSUP, "Whistle", 5, "black"),
 		/obj/item/beacon/supply_beacon = list(CAT_FCSUP, "Supply beacon", 5, "black"),
-		/obj/item/beacon/orbital_bombardment_beacon = list(CAT_LEDSUP, "Orbital beacon", 5, "black"),
+		/obj/item/beacon/orbital_bombardment_beacon = list(CAT_FCSUP, "Orbital beacon", 5, "black"),
 		/obj/item/fulton_extraction_pack = list(CAT_FCSUP, "Fulton Extraction Pack", 5, "orange"),
 		/obj/item/deployable_camera = list(CAT_FCSUP, "Deployable Overwatch Camera", 1, "orange"),
 		/obj/item/stack/sandbags_empty/half = list(CAT_FCSUP, "Sandbags x25", SANDBAG_PRICE_IN_GEAR_VENDOR, "black"),
