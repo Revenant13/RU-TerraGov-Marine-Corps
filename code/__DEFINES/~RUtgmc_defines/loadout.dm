@@ -131,4 +131,6 @@ GLOBAL_LIST_INIT(commander_gear_listed_products, list(
 		/obj/item/reagent_containers/hypospray/autoinjector/quickclotplus = list(CAT_FCSUP, "Injector (Quick-Clot Plus)", 7, "black"),
 		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine = list(CAT_FCSUP, "Injector (Synaptizine)", 5, "black"),
 		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = list(CAT_FCSUP, "Injector (Advanced)", 5, "black"),
+		/obj/item/stack/medical/heal_pack/advanced/bruise_pack/combat = list(CAT_FCSUP, "Combat Trauma Kit", 3, "black"),
+		/obj/item/stack/medical/heal_pack/advanced/burn_pack/combat = list(CAT_FCSUP, "Combat Burn Kit", 3, "black"),
 	))
