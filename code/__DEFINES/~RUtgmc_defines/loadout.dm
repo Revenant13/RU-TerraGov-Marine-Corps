@@ -50,7 +50,7 @@ GLOBAL_LIST_INIT(leader_gear_listed_products, list(
 
 GLOBAL_LIST_INIT(commander_gear_listed_products, list(
 		/obj/effect/vendor_bundle/commander = list(CAT_ESS, "Essential FC Set", 0, "white"),
-		/obj/item/megaphone = list(CAT_ESS, "Megaphone", 0, "white"),
+		/obj/item/megaphone = list(CAT_FCSUP, "Megaphone", 3, "black"),
 		/obj/item/beacon/supply_beacon = list(CAT_FCSUP, "Supply beacon", 5, "black"),
 		/obj/item/beacon/orbital_bombardment_beacon = list(CAT_FCSUP, "Orbital beacon", 5, "black"),
 		/obj/item/fulton_extraction_pack = list(CAT_FCSUP, "Fulton Extraction Pack", 5, "orange"),
