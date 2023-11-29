@@ -101,7 +101,7 @@ GLOBAL_LIST_INIT(commander_gear_listed_products, list(
 		/obj/item/weapon/gun/rifle/m412l1_hpr = list(CAT_FCSUP, "PR-412L1 Heavy Pulse Rifle", 15, "black"),
 		/obj/item/ammo_magazine/m412l1_hpr = list(CAT_FCSUP, "PR-412L1 Heavy Pulse Rifle Ammo", 2, "black"),
 		/obj/item/weapon/gun/rifle/standard_smartmachinegun = list(CAT_FCSUP, "SG-29 Smart Machine Gun", 25, "black"),
-		/obj/item/ammo_magazine/standard_smartmachinegun = list(CAT_FCSUP, "SG-29 dmmo arum", 3, "black"),
+		/obj/item/ammo_magazine/standard_smartmachinegun = list(CAT_FCSUP, "SG-29 dmmo arum", 2, "black"),
 		/obj/item/weapon/gun/rifle/T25 = list(CAT_FCSUP, "T25 Smartrifle", 25, "black"),
 		/obj/item/ammo_magazine/rifle/T25 = list(CAT_FCSUP, "T25 smartrifle magazine", 2, "black"),
 		/obj/item/ammo_magazine/packet/T25_rifle = list(CAT_FCSUP, "T25 smartrifle ammo box", 3, "black"),
