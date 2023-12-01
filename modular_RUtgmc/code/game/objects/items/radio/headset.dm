@@ -49,3 +49,18 @@
 		*/
 		return
 	SSminimaps.add_marker(wearer, marker_flags, image('modular_RUtgmc/icons/UI_icons/map_blips.dmi', null, wearer.job.minimap_icon))
+
+/obj/item/radio/headset/mainship/mcom/equipped(mob/living/carbon/human/user, slot)
+	. = ..()
+	if (slot == SLOT_EARS)
+		RegisterSignal(user, COMSIG_MOB_SAY, PROC_REF(handle_speech))
+	else
+		UnregisterSignal(user, COMSIG_MOB_SAY)
+
+/obj/item/radio/headset/mainship/mcom/dropped(mob/living/carbon/human/user)
+	. = ..()
+	UnregisterSignal(user, COMSIG_MOB_SAY)
+
+/obj/item/radio/headset/mainship/mcom/proc/handle_speech(mob/living/carbon/user, list/speech_args)
+	SIGNAL_HANDLER
+	speech_args[SPEECH_SPANS] |= list(SPAN_COMMAND)
