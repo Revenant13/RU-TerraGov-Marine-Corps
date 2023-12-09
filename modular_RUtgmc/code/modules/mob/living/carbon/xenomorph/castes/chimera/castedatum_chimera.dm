@@ -34,6 +34,8 @@
 	// *** Defense *** //
 	soft_armor = list(MELEE = 50, BULLET = 55, LASER = 50, ENERGY = 50, BOMB = 10, BIO = 40, FIRE = 50, ACID = 40)
 
+	wraith_blink_range = 5
+
 	minimap_icon = "chimera"
 
 	// *** Abilities *** //
@@ -42,6 +44,9 @@
 		/datum/action/ability/xeno_action/watch_xeno,
 		/datum/action/ability/activable/xeno/psydrain,
 		/datum/action/ability/activable/xeno/blink,
+		/datum/action/ability/xeno_action/phantom,
+		/datum/action/ability/activable/xeno/pounce/abduction,
+		/datum/action/ability/xeno_action/supernova,
 	)
 
 /datum/xeno_caste/chimera/normal
@@ -57,4 +62,7 @@
 		/datum/action/ability/xeno_action/watch_xeno,
 		/datum/action/ability/activable/xeno/psydrain,
 		/datum/action/ability/activable/xeno/blink,
+		/datum/action/ability/xeno_action/phantom,
+		/datum/action/ability/activable/xeno/pounce/abduction,
+		/datum/action/ability/xeno_action/supernova,
 	)
