@@ -5,7 +5,7 @@
 	cooldown_duration = 20 SECONDS
 	ability_cost = 100
 	use_state_flags = ABILITY_USE_STAGGERED
-	keybinding_signals = list()
+	keybinding_signals = list(COMSIG_XENOABILITY_CHIMERA_PHANTOM)
 	var/stealth_duration = 5 SECONDS
 	var/mob/living/carbon/xenomorph/chimera/ai/phantom
 	var/clone_duration = 7 SECONDS
@@ -76,7 +76,7 @@
 	cooldown_duration = 20 SECONDS
 	ability_cost = 100
 	use_state_flags = ABILITY_MOB_TARGET
-	keybinding_signals = list()
+	keybinding_signals = list(COMSIG_XENOABILITY_CHIMERA_ABDUCTION)
 	var/turf/initial_turf
 	var/slowdown_amount = 6
 	var/stagger_duration = 3 SECONDS
@@ -113,7 +113,7 @@
 	desc = "Create a pure force explosion that damages and knockbacks targets around."
 	cooldown_duration = 20 SECONDS
 	ability_cost = 100
-	keybinding_signals = list()
+	keybinding_signals = list(COMSIG_XENOABILITY_CHIMERA_SUPERNOVA)
 	var/range = 2
 	var/supernova_damage = 30
 
@@ -158,7 +158,7 @@
 	use_state_flags = ABILITY_MOB_TARGET
 	cooldown_duration = 20 SECONDS
 	ability_cost = 100
-	keybinding_signals = list()
+	keybinding_signals = list(COMSIG_XENOABILITY_CHIMERA_BODYSWAP)
 
 /datum/action/ability/activable/xeno/body_swap/on_cooldown_finish()
 	to_chat(owner, span_xenodanger("We gather enough strength to perform body swap again."))
@@ -192,11 +192,11 @@
 /datum/action/ability/xeno_action/crippling_strike
 	name = "Toggle crippling strike"
 	action_icon_state = "neuroclaws_off"
-	desc = "Toggle on to enable"
+	desc = "Toggle on to enable crippling attacks"
 	ability_cost = 0
 	cooldown_duration = 1 SECONDS
 	keybind_flags = ABILITY_KEYBIND_USE_ABILITY | ABILITY_IGNORE_SELECTED_ABILITY
-	keybinding_signals = list()
+	keybinding_signals = list(COMSIG_XENOABILITY_CHIMERA_CRIPPLING_STRIKE)
 	var/mob/living/old_target
 	var/additional_damage = 2
 	var/slowdown_amount = 1
