@@ -211,8 +211,8 @@
 	var/additional_damage = 2
 	var/slowdown_amount = 1
 	var/stagger_duration = 0.2 SECONDS
-	var/heal_amount = 10
-	var/plasma_gain = 25
+	var/heal_amount = 25
+	var/plasma_gain = 30
 	var/stacks = 0
 	var/stacks_max = 5
 
