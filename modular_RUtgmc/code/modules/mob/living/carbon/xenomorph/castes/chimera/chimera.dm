@@ -9,8 +9,17 @@
 	plasma_stored = 300
 	pixel_x = -16
 	old_x = -16
-	drag_delay = 6
+	drag_delay = 3
 	tier = XENO_TIER_THREE
 	upgrade = XENO_UPGRADE_NORMAL
 	mob_size = MOB_SIZE_BIG
+	pass_flags = PASS_LOW_STRUCTURE
+	wall_smash = FALSE
 	bubble_icon = "alienroyal"
+
+/mob/living/carbon/xenomorph/chimera/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_SILENT_FOOTSTEPS, XENO_TRAIT)
+
+/mob/living/carbon/xenomorph/chimera/get_liquid_slowdown()
+	return WARLOCK_WATER_SLOWDOWN

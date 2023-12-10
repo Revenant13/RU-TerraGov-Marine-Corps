@@ -20,7 +20,7 @@
 	plasma_gain = 50
 
 	// *** Health *** //
-	max_health = 400
+	max_health = 300
 
 	// *** Evolution *** //
 	upgrade_threshold = TIER_THREE_THRESHOLD
@@ -32,7 +32,7 @@
 	caste_flags = CASTE_CAN_BE_QUEEN_HEALED|CASTE_CAN_BE_GIVEN_PLASMA|CASTE_CAN_BE_LEADER
 
 	// *** Defense *** //
-	soft_armor = list(MELEE = 50, BULLET = 55, LASER = 50, ENERGY = 50, BOMB = 10, BIO = 40, FIRE = 50, ACID = 40)
+	soft_armor = list(MELEE = 50, BULLET = 55, LASER = 50, ENERGY = 50, BOMB = 0, BIO = 40, FIRE = 50, ACID = 40)
 
 	wraith_blink_range = 5
 
@@ -46,6 +46,7 @@
 		/datum/action/ability/activable/xeno/blink,
 		/datum/action/ability/xeno_action/phantom,
 		/datum/action/ability/activable/xeno/pounce/abduction,
+		/datum/action/ability/activable/xeno/body_swap,
 		/datum/action/ability/xeno_action/supernova,
 	)
 
@@ -64,5 +65,7 @@
 		/datum/action/ability/activable/xeno/blink,
 		/datum/action/ability/xeno_action/phantom,
 		/datum/action/ability/activable/xeno/pounce/abduction,
+		/datum/action/ability/activable/xeno/body_swap,
 		/datum/action/ability/xeno_action/supernova,
+		/datum/action/ability/xeno_action/crippling_strike,
 	)
