@@ -23,13 +23,13 @@
 	max_health = 350
 
 	// *** Evolution *** //
-	upgrade_threshold = TIER_THREE_THRESHOLD
+	// upgrade_threshold = TIER_THREE_THRESHOLD // RUTGMC DELETION
 
 	deevolves_to = /mob/living/carbon/xenomorph/wraith
 
 	// *** Flags *** //
 	caste_flags = CASTE_EVOLUTION_ALLOWED
-	caste_flags = CASTE_CAN_BE_QUEEN_HEALED|CASTE_CAN_BE_GIVEN_PLASMA|CASTE_CAN_BE_LEADER
+	can_flags = CASTE_CAN_BE_QUEEN_HEALED|CASTE_CAN_BE_GIVEN_PLASMA|CASTE_CAN_BE_LEADER
 
 	// *** Defense *** //
 	soft_armor = list(MELEE = 50, BULLET = 55, LASER = 50, ENERGY = 50, BOMB = 0, BIO = 40, FIRE = 50, ACID = 40)
