@@ -139,7 +139,7 @@
 	new /obj/effect/temp_visual/shockwave(get_turf(owner), range)
 	for(var/mob/living/living_target in cheap_get_humans_near(get_turf(owner), range))
 
-		if(living_target.stat == DEAD || living_target == owner)
+		if(living_target.stat == DEAD || living_target == owner || !line_of_sight(owner, living_target))
 			continue
 
 		playsound(living_target,'sound/weapons/alien_claw_block.ogg', 75, 1)
@@ -149,7 +149,7 @@
 		var/throwlocation = living_target.loc
 		for(var/x in 1 to 3)
 			throwlocation = get_step(throwlocation, get_dir(owner, living_target))
-		living_target.throw_at(throwlocation, 3, 1, owner, TRUE)
+		living_target.throw_at(throwlocation, 1, 1, owner, TRUE)
 	succeed_activate()
 	add_cooldown()
 
