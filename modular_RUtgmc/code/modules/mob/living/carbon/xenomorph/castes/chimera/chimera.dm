@@ -23,3 +23,8 @@
 
 /mob/living/carbon/xenomorph/chimera/get_liquid_slowdown()
 	return WARLOCK_WATER_SLOWDOWN
+
+/mob/living/carbon/xenomorph/chimera/phantom
+	caste_base_type = /mob/living/carbon/xenomorph/chimera/phantom
+	tier = XENO_TIER_MINION
+	upgrade = XENO_UPGRADE_BASETYPE

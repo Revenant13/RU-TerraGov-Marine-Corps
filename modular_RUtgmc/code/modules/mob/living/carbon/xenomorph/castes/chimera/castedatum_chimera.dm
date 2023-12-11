@@ -17,7 +17,7 @@
 
 	// *** Plasma *** //
 	plasma_max = 500
-	plasma_gain = 50
+	plasma_gain = 15
 
 	// *** Health *** //
 	max_health = 350
@@ -43,7 +43,7 @@
 		/datum/action/ability/xeno_action/xeno_resting,
 		/datum/action/ability/xeno_action/watch_xeno,
 		/datum/action/ability/activable/xeno/psydrain,
-		/datum/action/ability/activable/xeno/blink,
+		/datum/action/ability/activable/xeno/blink/chimera,
 		/datum/action/ability/xeno_action/phantom,
 		/datum/action/ability/activable/xeno/pounce/abduction,
 		/datum/action/ability/activable/xeno/body_swap,
@@ -62,10 +62,21 @@
 		/datum/action/ability/xeno_action/xeno_resting,
 		/datum/action/ability/xeno_action/watch_xeno,
 		/datum/action/ability/activable/xeno/psydrain,
-		/datum/action/ability/activable/xeno/blink,
+		/datum/action/ability/activable/xeno/blink/chimera,
 		/datum/action/ability/xeno_action/phantom,
 		/datum/action/ability/activable/xeno/pounce/abduction,
 		/datum/action/ability/activable/xeno/body_swap,
 		/datum/action/ability/xeno_action/supernova,
 		/datum/action/ability/xeno_action/crippling_strike,
 	)
+
+/datum/xeno_caste/chimera/phantom
+	caste_type_path = /mob/living/carbon/xenomorph/chimera/phantom
+	caste_flags = CASTE_DO_NOT_ALERT_LOW_LIFE|CASTE_IS_A_MINION
+	can_flags = CASTE_CAN_BE_QUEEN_HEALED
+	caste_traits = null
+
+	minimap_icon = "xenominion"
+
+	tier = XENO_TIER_MINION
+	upgrade = XENO_UPGRADE_BASETYPE

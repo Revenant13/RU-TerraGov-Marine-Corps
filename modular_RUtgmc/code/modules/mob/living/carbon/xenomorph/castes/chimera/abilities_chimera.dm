@@ -1,8 +1,12 @@
+/datum/action/ability/activable/xeno/blink/chimera
+	cooldown_duration = 3 SECONDS
+	ability_cost = 75
+
 /datum/action/ability/xeno_action/phantom
 	name = "Phantom"
 	action_icon_state = "phantom"
 	desc = "Create a physical clone and hide in shadows."
-	cooldown_duration = 20 SECONDS
+	cooldown_duration = 30 SECONDS
 	ability_cost = 100
 	use_state_flags = ABILITY_USE_STAGGERED
 	keybinding_signals = list(
@@ -111,6 +115,12 @@
 		target.adjust_stagger(stagger_duration)
 	UnregisterSignal(owner, COMSIG_MOVABLE_MOVED)
 
+/datum/action/ability/activable/xeno/pounce/abduction/ai_should_start_consider()
+	return FALSE
+
+/datum/action/ability/activable/xeno/pounce/abduction/ai_should_use(target)
+	return FALSE
+
 /datum/action/ability/xeno_action/supernova
 	name = "Supernova"
 	action_icon_state = "supernova"
@@ -142,20 +152,6 @@
 		living_target.throw_at(throwlocation, 3, 1, owner, TRUE)
 	succeed_activate()
 	add_cooldown()
-
-/datum/action/ability/xeno_action/supernova/ai_should_start_consider()
-	return TRUE
-
-/datum/action/ability/xeno_action/supernova/ai_should_use(atom/target)
-	if(!iscarbon(target))
-		return FALSE
-	if(!line_of_sight(owner, target, range))
-		return FALSE
-	if(!can_use_action(override_flags = ABILITY_IGNORE_SELECTED_ABILITY))
-		return FALSE
-	if(target.get_xeno_hivenumber() == owner.get_xeno_hivenumber())
-		return FALSE
-	return TRUE
 
 /datum/action/ability/activable/xeno/body_swap
 	name = "Body swap"
