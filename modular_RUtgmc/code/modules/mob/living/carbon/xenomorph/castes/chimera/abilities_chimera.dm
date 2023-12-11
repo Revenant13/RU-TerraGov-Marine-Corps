@@ -193,6 +193,12 @@
 	succeed_activate()
 	add_cooldown()
 
+/particles/xeno_slash/vampirism/crippling_strike
+	icon_state = "x"
+	color = "#440088"
+	velocity = list(50, 50)
+	drift = generator(GEN_CIRCLE, 15, 15, NORMAL_RAND)
+
 /datum/action/ability/xeno_action/crippling_strike
 	name = "Toggle crippling strike"
 	action_icon_state = "neuroclaws_off"
@@ -211,6 +217,7 @@
 	var/plasma_gain = 30
 	var/stacks = 0
 	var/stacks_max = 5
+	var/obj/effect/abstract/particle_holder/particle_holder
 
 /datum/action/ability/xeno_action/crippling_strike/update_button_icon()
 	var/mob/living/carbon/xenomorph/xeno = owner
@@ -259,3 +266,7 @@
 	if(stacks < stacks_max)
 		stacks++
 	update_button_icon()
+	particle_holder = new(X, /particles/xeno_slash/vampirism/crippling_strike)
+	particle_holder.pixel_y = 18
+	particle_holder.pixel_x = 18
+	QDEL_NULL_IN(src, particle_holder, 0.7 SECONDS)
