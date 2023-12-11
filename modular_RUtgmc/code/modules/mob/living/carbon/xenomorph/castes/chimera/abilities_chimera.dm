@@ -26,7 +26,7 @@
 	. = ..()
 	var/mob/living/carbon/xenomorph/chimera/X = owner
 
-	phantom = new /mob/living/carbon/xenomorph/chimera/ai(get_turf(X))
+	phantom = new /mob/living/carbon/xenomorph/chimera/phantom(get_turf(X))
 	addtimer(CALLBACK(phantom, TYPE_PROC_REF(/mob, gib)), clone_duration)
 
 	succeed_activate()

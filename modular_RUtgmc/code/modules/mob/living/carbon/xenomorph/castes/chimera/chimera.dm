@@ -28,3 +28,7 @@
 	caste_base_type = /mob/living/carbon/xenomorph/chimera/phantom
 	tier = XENO_TIER_MINION
 	upgrade = XENO_UPGRADE_BASETYPE
+
+/mob/living/carbon/xenomorph/chimera/phantom/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/ai_controller, /datum/ai_behavior/xeno)
