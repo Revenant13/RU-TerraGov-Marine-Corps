@@ -143,7 +143,7 @@
 			continue
 
 		playsound(living_target,'sound/weapons/alien_claw_block.ogg', 75, 1)
-		living_target.apply_effects(2 SECONDS, 2 SECONDS)
+		living_target.apply_effects(0.5 SECONDS, 0.5 SECONDS)
 		living_target.apply_damage(supernova_damage, BRUTE, blocked = BOMB)
 		living_target.apply_damage(supernova_damage * 2, STAMINA, blocked = BOMB)
 		var/throwlocation = living_target.loc
