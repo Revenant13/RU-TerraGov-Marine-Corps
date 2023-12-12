@@ -85,6 +85,7 @@
 	keybinding_signals = list(
 		KEYBINDING_NORMAL = COMSIG_XENOABILITY_CHIMERA_ABDUCTION,
 	)
+	use_state_flags = null
 	var/turf/initial_turf
 	var/slowdown_amount = 6
 	var/stagger_duration = 3 SECONDS
