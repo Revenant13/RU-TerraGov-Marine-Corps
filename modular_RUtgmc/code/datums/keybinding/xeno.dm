@@ -28,11 +28,11 @@
 	description = "Abduct the prey."
 	keybind_signal = COMSIG_XENOABILITY_CHIMERA_ABDUCTION
 
-/datum/keybinding/xeno/supernova
-	name = "supernova"
-	full_name = "Chimera: Supernova"
+/datum/keybinding/xeno/warp_blast
+	name = "warp_blast"
+	full_name = "Chimera: Warp Blast"
 	description = "Create a pure force explosion that damages and knockbacks targets around."
-	keybind_signal = COMSIG_XENOABILITY_CHIMERA_SUPERNOVA
+	keybind_signal = COMSIG_XENOABILITY_CHIMERA_WARP_BLAST
 
 /datum/keybinding/xeno/bodyswap
 	name = "bodyswap"

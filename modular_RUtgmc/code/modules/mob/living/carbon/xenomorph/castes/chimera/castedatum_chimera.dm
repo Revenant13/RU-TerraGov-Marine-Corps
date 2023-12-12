@@ -17,7 +17,7 @@
 
 	// *** Plasma *** //
 	plasma_max = 500
-	plasma_gain = 15
+	plasma_gain = 25
 
 	// *** Health *** //
 	max_health = 350
@@ -32,7 +32,7 @@
 	can_flags = CASTE_CAN_BE_QUEEN_HEALED|CASTE_CAN_BE_GIVEN_PLASMA|CASTE_CAN_BE_LEADER
 
 	// *** Defense *** //
-	soft_armor = list(MELEE = 50, BULLET = 55, LASER = 50, ENERGY = 50, BOMB = 0, BIO = 40, FIRE = 50, ACID = 40)
+	soft_armor = list(MELEE = 50, BULLET = 40, LASER = 40, ENERGY = 40, BOMB = 0, BIO = 50, FIRE = 0, ACID = 50)
 
 	wraith_blink_range = 5
 
@@ -47,7 +47,7 @@
 		/datum/action/ability/xeno_action/phantom,
 		/datum/action/ability/activable/xeno/pounce/abduction,
 		/datum/action/ability/activable/xeno/body_swap,
-		/datum/action/ability/xeno_action/supernova,
+		/datum/action/ability/xeno_action/warp_blast,
 	)
 
 /datum/xeno_caste/chimera/normal
@@ -66,7 +66,7 @@
 		/datum/action/ability/xeno_action/phantom,
 		/datum/action/ability/activable/xeno/pounce/abduction,
 		/datum/action/ability/activable/xeno/body_swap,
-		/datum/action/ability/xeno_action/supernova,
+		/datum/action/ability/xeno_action/warp_blast,
 		/datum/action/ability/xeno_action/crippling_strike,
 	)
 
@@ -82,3 +82,5 @@
 
 	tier = XENO_TIER_MINION
 	upgrade = XENO_UPGRADE_BASETYPE
+
+	actions = null

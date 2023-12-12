@@ -106,7 +106,7 @@
 /datum/action/ability/activable/xeno/pounce/abduction/proc/abduct(mob/living/target)
 	var/mob/living/carbon/xenomorph/xeno_owner = owner
 	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(movement_fx))
-	if(!do_after(xeno_owner, 0.5 SECONDS))
+	if(!do_after(xeno_owner, 0.5 SECONDS, IGNORE_HELD_ITEM, target, BUSY_ICON_DANGER, extra_checks = CALLBACK(xeno_owner, TYPE_PROC_REF(/mob, break_do_after_checks), list("health" = xeno_owner.health))))
 		UnregisterSignal(owner, COMSIG_MOVABLE_MOVED)
 		return
 	xeno_owner.throw_at(initial_turf, pounce_range, XENO_POUNCE_SPEED, xeno_owner)
@@ -122,19 +122,19 @@
 /datum/action/ability/activable/xeno/pounce/abduction/ai_should_use(target)
 	return FALSE
 
-/datum/action/ability/xeno_action/supernova
-	name = "Supernova"
-	action_icon_state = "supernova"
+/datum/action/ability/xeno_action/warp_blast
+	name = "Warp Blast"
+	action_icon_state = "warp_blast"
 	desc = "Create a pure force explosion that damages and knockbacks targets around."
 	cooldown_duration = 20 SECONDS
 	ability_cost = 100
 	keybinding_signals = list(
-		KEYBINDING_NORMAL = COMSIG_XENOABILITY_CHIMERA_SUPERNOVA,
+		KEYBINDING_NORMAL = COMSIG_XENOABILITY_CHIMERA_WARP_BLAST,
 	)
 	var/range = 2
-	var/supernova_damage = 30
+	var/warp_blast_damage = 30
 
-/datum/action/ability/xeno_action/supernova/action_activate()
+/datum/action/ability/xeno_action/warp_blast/action_activate()
 	. = ..()
 	playsound(owner,'sound/effects/bamf.ogg', 75, TRUE)
 	new /obj/effect/temp_visual/shockwave(get_turf(owner), range)
@@ -145,8 +145,8 @@
 
 		playsound(living_target,'sound/weapons/alien_claw_block.ogg', 75, 1)
 		living_target.apply_effects(0.5 SECONDS, 0.5 SECONDS)
-		living_target.apply_damage(supernova_damage, BRUTE, blocked = BOMB)
-		living_target.apply_damage(supernova_damage * 2, STAMINA, blocked = BOMB)
+		living_target.apply_damage(warp_blast_damage, BRUTE, blocked = BOMB)
+		living_target.apply_damage(warp_blast_damage * 2, STAMINA, blocked = BOMB)
 		var/throwlocation = living_target.loc
 		for(var/x in 1 to 3)
 			throwlocation = get_step(throwlocation, get_dir(owner, living_target))
