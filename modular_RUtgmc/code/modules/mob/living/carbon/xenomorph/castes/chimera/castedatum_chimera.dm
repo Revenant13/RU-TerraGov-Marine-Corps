@@ -72,9 +72,11 @@
 
 /datum/xeno_caste/chimera/phantom
 	caste_type_path = /mob/living/carbon/xenomorph/chimera/phantom
-	caste_flags = CASTE_DO_NOT_ALERT_LOW_LIFE|CASTE_IS_A_MINION
+	caste_flags = CASTE_DO_NOT_ALERT_LOW_LIFE|CASTE_IS_A_MINION|CASTE_DO_NOT_ANNOUNCE_DEATH
 	can_flags = CASTE_CAN_BE_QUEEN_HEALED
 	caste_traits = null
+
+	melee_damage = 10
 
 	minimap_icon = "xenominion"
 

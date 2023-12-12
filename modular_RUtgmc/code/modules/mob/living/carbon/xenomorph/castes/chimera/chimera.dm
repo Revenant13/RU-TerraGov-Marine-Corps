@@ -28,6 +28,7 @@
 	caste_base_type = /mob/living/carbon/xenomorph/chimera/phantom
 	tier = XENO_TIER_MINION
 	upgrade = XENO_UPGRADE_BASETYPE
+	mob_size = MOB_SIZE_XENO
 
 /mob/living/carbon/xenomorph/chimera/phantom/Initialize(mapload)
 	. = ..()

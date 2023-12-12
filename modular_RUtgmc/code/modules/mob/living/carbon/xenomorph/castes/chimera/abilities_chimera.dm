@@ -198,6 +198,7 @@
 	color = "#440088"
 	velocity = list(50, 50)
 	drift = generator(GEN_CIRCLE, 15, 15, NORMAL_RAND)
+	gravity = list(0, 0)
 
 /datum/action/ability/xeno_action/crippling_strike
 	name = "Toggle crippling strike"
