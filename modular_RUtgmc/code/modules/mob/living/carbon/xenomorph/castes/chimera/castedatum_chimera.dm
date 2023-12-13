@@ -76,11 +76,15 @@
 	can_flags = CASTE_CAN_BE_QUEEN_HEALED
 	caste_traits = null
 
-	melee_damage = 10
+	melee_damage = 20
 
 	minimap_icon = "xenominion"
 
 	tier = XENO_TIER_MINION
 	upgrade = XENO_UPGRADE_BASETYPE
+
+	max_health = 200
+
+	soft_armor = list(MELEE = 25, BULLET = 25, LASER = 25, ENERGY = 25, BOMB = 0, BIO = 50, FIRE = 0, ACID = 50)
 
 	actions = null

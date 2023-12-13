@@ -150,7 +150,7 @@
 		var/throwlocation = living_target.loc
 		for(var/x in 1 to 3)
 			throwlocation = get_step(throwlocation, get_dir(owner, living_target))
-		living_target.throw_at(throwlocation, 1, 1, owner, TRUE)
+		living_target.throw_at(throwlocation, 2, 1, owner, TRUE)
 	succeed_activate()
 	add_cooldown()
 
@@ -174,6 +174,9 @@
 	. = ..()
 	if(!isxeno(A))
 		owner.balloon_alert(owner, "We can only swap places with another alien.")
+		return fail_activate()
+	if(get_dist(owner, A) > 7 || owner.z != A.z)
+		owner.balloon_alert(owner, "We are too far away!")
 		return fail_activate()
 
 	var/mob/living/carbon/xenomorph/target = A
