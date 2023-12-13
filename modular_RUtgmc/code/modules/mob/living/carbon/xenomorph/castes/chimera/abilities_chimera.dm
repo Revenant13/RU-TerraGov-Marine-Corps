@@ -106,7 +106,7 @@
 /datum/action/ability/activable/xeno/pounce/abduction/proc/abduct(mob/living/target)
 	var/mob/living/carbon/xenomorph/xeno_owner = owner
 	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(movement_fx))
-	if(!do_after(xeno_owner, 0.5 SECONDS, IGNORE_HELD_ITEM, target, BUSY_ICON_DANGER, extra_checks = CALLBACK(xeno_owner, TYPE_PROC_REF(/mob, break_do_after_checks), list("health" = xeno_owner.health))))
+	if(!do_after(xeno_owner, 0.5 SECONDS, IGNORE_HELD_ITEM, target, BUSY_ICON_DANGER))
 		UnregisterSignal(owner, COMSIG_MOVABLE_MOVED)
 		return
 	xeno_owner.throw_at(initial_turf, pounce_range, XENO_POUNCE_SPEED, xeno_owner)
