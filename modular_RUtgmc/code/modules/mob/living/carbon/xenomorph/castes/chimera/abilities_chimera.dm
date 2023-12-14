@@ -285,7 +285,7 @@
 		return
 	if(old_target != target)
 		old_target = target
-		stacks -= 2
+		stacks = max(0, stacks - 2)
 	var/mob/living/carbon/xenomorph/X = owner
 	target.apply_damage(additional_damage * stacks, BRUTE, X.zone_selected, blocked = FALSE)
 	target.add_slowdown(slowdown_amount * stacks)
