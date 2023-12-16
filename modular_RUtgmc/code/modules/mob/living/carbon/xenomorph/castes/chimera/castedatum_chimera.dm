@@ -83,8 +83,8 @@
 	tier = XENO_TIER_MINION
 	upgrade = XENO_UPGRADE_BASETYPE
 
-	max_health = 200
+	max_health = 150
 
-	soft_armor = list(MELEE = 25, BULLET = 25, LASER = 25, ENERGY = 25, BOMB = 0, BIO = 50, FIRE = 0, ACID = 50)
+	soft_armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
 
 	actions = null
